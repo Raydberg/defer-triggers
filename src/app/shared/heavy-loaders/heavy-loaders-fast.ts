@@ -1,8 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'heavy-loaders-fast',
   imports: [],
-  template: `<h1>Hola mundo</h1>`
+  template: `
+  <section [class]="'w-full ' + cssClass()" >
+    <ng-content />
+  </section>
+  `
 })
-export class HeavyLoadersFast { }
+export class HeavyLoadersFast {
+
+  cssClass = input.required<string>()
+
+
+}

@@ -1,1 +1,88 @@
-<p>defer-options works!</p>,
+<section>
+    <h1 class="text-xl"> Interacciones</h1>
+    <hr class="my-2">
+
+    @defer (on interaction) {
+    <heavy-loaders-fast cssClass="bg-blue-500 h-20">
+        <span>On Interation</span>
+    </heavy-loaders-fast>
+    }@placeholder {
+    <div class="w-full h-20 bg-purple-100">
+
+    </div>
+    }
+
+</section>
+<section>
+    <hr class="my-2">
+
+    <button #btnInteraction class="bg-purple-400 border rounded-2xl p-2 ">Click Me</button>
+
+    @defer (on interaction(btnInteraction)) {
+    <heavy-loaders-fast cssClass="bg-blue-500 h-20">
+        <span>On Interation</span>
+    </heavy-loaders-fast>
+    }@placeholder {
+    <div class="w-full h-20 bg-purple-100">
+
+    </div>
+    }
+
+</section>
+<section>
+    <hr class="my-2">
+
+
+    @defer (on hover) {
+    <heavy-loaders-fast cssClass="bg-blue-500 h-20">
+        <span>On Hover</span>
+    </heavy-loaders-fast>
+    }@placeholder {
+    <div class="w-full h-20 bg-purple-100">
+
+    </div>
+    }
+
+</section>
+<section>
+    <hr class="my-2">
+
+    @defer (on immediate) {
+    <heavy-loaders-fast cssClass="bg-blue-500 h-20">
+        <span>On Immediate</span>
+    </heavy-loaders-fast>
+    }@placeholder {
+    <div class="w-full h-20 bg-purple-100">
+
+    </div>
+    }
+
+</section>
+<section>
+    <hr class="my-2">
+
+    @defer (on timer(2000)) {
+    <heavy-loaders-fast cssClass="bg-green-500 h-20">
+        <span>On Timmer</span>
+    </heavy-loaders-fast>
+    }@placeholder {
+    <div class="w-full h-20 bg-purple-100">
+
+    </div>
+    }
+
+</section>
+<section>
+    <hr class="my-2">
+
+    @defer (on hover;prefetch on idle) {
+    <heavy-loaders-fast cssClass="bg-green-500 h-20">
+        <span>On Hover,idle</span>
+    </heavy-loaders-fast>
+    }@placeholder {
+    <div class="w-full h-20 bg-purple-100">
+        Hover
+    </div>
+    }
+
+</section>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'view-transitions',
+  selector: 'view-transitions-2',
   imports: [],
   template: `
-  <section class="flex justify-start">
+  <section class="flex justify-end">
     <img 
     srcset="https://picsum.photos/id/237/200/300" 
     alt="Piscum" 
@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
     style="view-transition-name: hero1"
     />
 
-    <div class="fixed bottom-16 right-10 bg-blue-500 w-56 h-56"
+    <div class="bg-blue-500 w-32 h-32 rounded-2xl"
        style="view-transition-name: hero2"
     >
 
@@ -22,4 +22,4 @@ import { Component } from '@angular/core';
 </section>
   `,
 })
-export default class ViewTransitions { }
+export default class ViewTransitions2 { }
