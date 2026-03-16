@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { SideMenu } from '../shared/side-menu/side-menu';
 
 @Component({
   selector: 'dashboard',
-  imports: [],
+  imports: [RouterModule,SideMenu],
   templateUrl: './dashboard.html',
 })
-export class Dashboard { }
+export default class Dashboard { }
