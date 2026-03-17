@@ -1,0 +1,51 @@
+<table ngGrid class="basic-data-table">
+  <thead>
+    <tr ngGridRow>
+      <th ngGridCell>
+
+      </th>
+      <th ngGridCell>Name</th>
+      <th ngGridCell>Description</th>
+      <th ngGridCell>
+         <button
+          ngGridCellWidget
+          class="sort-button "
+          aria-label="Sort by ID"
+          (click)="sortTaskByPrice()"
+          
+        >
+          Price
+          <span
+            aria-hidden="true"
+            class="material-symbols-outlined"
+            translate="no"
+            aria-hidden="true"
+          >
+            {{ sortAscending ? 'arrow_upward' : 'arrow_downward' }}
+          </span>
+        </button>
+        </th>
+      <th ngGridCell>brand</th>
+      <th ngGridCell>image</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (product of data(); track product.name) {
+      <tr ngGridRow>
+        <td ngGridCell>
+        </td>
+        <td ngGridCell>{{ product.name }}</td>
+        <td ngGridCell>{{ product.description }}</td>
+        <td ngGridCell>{{ product.price | number }}</td>
+        <td ngGridCell>{{ product.brand }}</td>
+        <td ngGridCell>
+   <img  [alt]="product.name" [srcset]="product.imageUrl" 
+          height="100vh"
+          width="100vh"
+   >
+
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

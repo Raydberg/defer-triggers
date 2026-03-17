@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined');
+
+:host {
+    justify-content: center;
+    margin: auto;
+    font-family: var(--inter-font);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    border: unset;
+    padding: unset;
+    color: unset;
+    background: unset;
+    outline: none;
+}
+
+
+[ngGrid] {
+    display: table;
+    background-color: var(--septenary-contrast);
+    border-spacing: 0;
+}
+
+[ngGrid] th,
+[ngGrid] td {
+    padding: 0.75rem 1rem;
+}
+
+thead {
+    background-image: var(--pink-to-purple-horizontal-gradient);
+    background-clip: text;
+    color: transparent;
+}
+
+tbody {
+    background-color: var(--octonary-contrast);
+}
+
+tbody [ngGridRow]:focus-within,
+tbody [ngGridRow]:hover {
+    background-color: var(--septenary-contrast);
+}
+
+[ngGridCell]:focus-within,
+[ngGridCell]:hover {
+    outline-offset: -1px;
+    outline: 1px solid color-mix(in srgb, var(--hot-pink) 60%, transparent);
+}
+
+[ngGridCell] {
+    color: white;
+}
+
+.sort-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.assignee-cell [ngGridCellWidget] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+}
+
+.assignee-edit-button {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.assignee-cell:focus-within .assignee-edit-button,
+.assignee-cell:hover .assignee-edit-button {
+    visibility: initial;
+}
+
